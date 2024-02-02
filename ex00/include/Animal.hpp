@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:49:47 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/02 16:56:20 by bazura           ###   ########.fr       */
+/*   Updated: 2024/02/02 17:40:39 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,16 @@
 #include <iostream>
 
 class Animal {
- private:
+ public:
+  Animal();
+  virtual ~Animal();
+  Animal(const Animal& other);
+
+  Animal& operator=(const Animal& other);
+  virtual void makeSound() const;
+  virtual void getType() const;
+
+ protected:
   std::string type;
 };
 
