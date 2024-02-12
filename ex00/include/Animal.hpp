@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:49:47 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/02 17:40:39 by bazura           ###   ########.fr       */
+/*   Updated: 2024/02/12 17:34:26 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Animal {
   Animal(const Animal& other);
 
   Animal& operator=(const Animal& other);
-  virtual void makeSound() const;
-  virtual void getType() const;
+  void makeSound() const;
+  std::string getType() const;
 
  protected:
   std::string type;

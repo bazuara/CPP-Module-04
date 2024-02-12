@@ -6,16 +6,16 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:07 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/02 17:34:19 by bazura           ###   ########.fr       */
+/*   Updated: 2024/02/12 17:35:50 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Cat.hpp>
 
-Cat::Cat() {
-  type = "Cat";
+Cat::Cat() : Animal() {
+  this->type = "Cat";
   std::cout << "Cat constructor called" << std::endl;
-}  // Default constructor
+}  // Constructor
 
 Cat::~Cat() {
   std::cout << "Cat destructor called" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:38 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/02 17:37:20 by bazura           ###   ########.fr       */
+/*   Updated: 2024/02/12 17:45:25 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,14 @@ Animal& Animal::operator=(const Animal& other) {
 }  // Assignment operator
 
 void Animal::makeSound() const {
-  std::cout << "Animal sound" << std::endl;
-}  // Member function
+  if (type == "Dog")
+    std::cout << "Woof woof" << std::endl;
+  else if (type == "Cat")
+    std::cout << "Meow meow" << std::endl;
+  else
+    std::cout << "Animal sound" << std::endl;
+}  // Make sound
 
-void Animal::getType() const {
-  std::cout << type << std::endl;
-}  // Member function
+std::string Animal::getType() const {
+  return this->type;
+}  // Get type
