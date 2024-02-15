@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
+/*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:38 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/12 17:45:25 by bazura           ###   ########.fr       */
+/*   Updated: 2024/02/15 17:40:41 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,7 @@ Animal& Animal::operator=(const Animal& other) {
 }  // Assignment operator
 
 void Animal::makeSound() const {
-  if (type == "Dog")
-    std::cout << "Woof woof" << std::endl;
-  else if (type == "Cat")
-    std::cout << "Meow meow" << std::endl;
-  else
-    std::cout << "Animal sound" << std::endl;
+  std::cout << "Animal sound" << std::endl;
 }  // Make sound
 
 std::string Animal::getType() const {

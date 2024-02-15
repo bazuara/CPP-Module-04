@@ -6,7 +6,7 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:02:57 by bazuara           #+#    #+#             */
-/*   Updated: 2024/02/14 17:13:17 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/15 17:44:08 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
 }  // Assignment operator
 
 void WrongAnimal::makeSound() const {
-  if (type == "WrongDog")
-    std::cout << "Wrong Woof woof" << std::endl;
-  else if (type == "WrongCat")
-    std::cout << "Wrong Meow meow" << std::endl;
-  else
-    std::cout << "WrongAnimal sound" << std::endl;
+  std::cout << "WrongAnimal sound" << std::endl;
 }  // Make sound
 
 std::string WrongAnimal::getType() const {

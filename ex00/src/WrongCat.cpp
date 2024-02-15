@@ -6,7 +6,7 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 16:54:42 by bazuara           #+#    #+#             */
-/*   Updated: 2024/02/14 17:10:56 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/15 17:42:10 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,7 @@ WrongCat& WrongCat::operator=(const WrongCat& other) {
   type = other.type;
   return *this;
 }  // Assignment operator
+
+void WrongCat::makeSound() const {
+  std::cout << "Guau Guau" << std::endl;
+}  // Member function
