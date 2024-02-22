@@ -6,7 +6,7 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:38 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/15 17:40:41 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/22 19:12:14 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Animal::Animal(const Animal& other) {
 }  // Copy constructor
 
 Animal& Animal::operator=(const Animal& other) {
-  type = other.type;
+  type = other.getType();
   return *this;
 }  // Assignment operator
 
@@ -37,3 +37,7 @@ void Animal::makeSound() const {
 std::string Animal::getType() const {
   return this->type;
 }  // Get type
+
+void Animal::setType(std::string type) {
+  this->type = type;
+}  // Set type

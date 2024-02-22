@@ -6,7 +6,7 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 14:59:52 by bazuara           #+#    #+#             */
-/*   Updated: 2024/02/14 17:04:31 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/22 19:18:55 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ class WrongCat : public WrongAnimal {
   WrongCat(const WrongCat& other);
   WrongCat& operator=(const WrongCat& other);
   void makeSound() const;
-  std::string getType() const;
 };
 #endif  // WRONG_CAT_HPP_

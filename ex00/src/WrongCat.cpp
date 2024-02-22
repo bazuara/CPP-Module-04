@@ -6,14 +6,14 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 16:54:42 by bazuara           #+#    #+#             */
-/*   Updated: 2024/02/15 17:42:10 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/22 19:32:21 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <WrongCat.hpp>
 
 WrongCat::WrongCat() : WrongAnimal() {
-  this->type = "WrongCat";
+  this->setType("WrongCat");
   std::cout << "WrongCat constructor called" << std::endl;
 }  // Default constructor
 
@@ -26,7 +26,7 @@ WrongCat::WrongCat(const WrongCat& other) {
 }  // Copy constructor
 
 WrongCat& WrongCat::operator=(const WrongCat& other) {
-  type = other.type;
+  this->setType(other.getType());
   return *this;
 }  // Assignment operator
 

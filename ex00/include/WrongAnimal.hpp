@@ -6,7 +6,7 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:49:47 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/14 17:03:57 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/22 19:31:09 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ class WrongAnimal {
   WrongAnimal& operator=(const WrongAnimal& other);
   void makeSound() const;
   std::string getType() const;
+  void setType(std::string type);
 
- protected:
+ private:
   std::string type;
 };
 

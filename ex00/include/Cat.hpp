@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
+/*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:58:31 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/12 17:35:04 by bazura           ###   ########.fr       */
+/*   Updated: 2024/02/22 19:09:29 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Cat : public Animal {
   Cat(const Cat& other);
   Cat& operator=(const Cat& other);
   void makeSound() const;
-  void getType() const;
 };
 
 #endif  // CAT_HPP_
