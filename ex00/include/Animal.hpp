@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:49:47 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/22 19:04:53 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/03/12 11:14:37 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal {
   std::string getType() const;
   void setType(std::string type);
 
- protected:
+ private:
   std::string type;
 };
 
