@@ -6,14 +6,14 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:07 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/15 17:40:09 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/22 19:00:41 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Cat.hpp>
 
 Cat::Cat() : Animal() {
-  this->type = "Cat";
+  this->setType("Cat");
   std::cout << "Cat constructor called" << std::endl;
 }  // Constructor
 
@@ -26,7 +26,7 @@ Cat::Cat(const Cat& other) {
 }  // Copy constructor
 
 Cat& Cat::operator=(const Cat& other) {
-  type = other.type;
+  this->setType(other.getType());
   return *this;
 }  // Assignment operator
 

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 16:58:31 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/22 19:09:29 by bazuara          ###   ########.fr       */
+/*   Created: 2024/02/14 14:59:52 by bazuara           #+#    #+#             */
+/*   Updated: 2024/02/14 17:04:31 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-#define CAT_HPP_
+#ifndef WRONG_CAT_HPP_
+#define WRONG_CAT_HPP_
 
-#include <Animal.hpp>
+#include <WrongAnimal.hpp>
 
-class Cat : public Animal {
+class WrongCat : public WrongAnimal {
  public:
-  Cat();
-  ~Cat();
-  Cat(const Cat& other);
-  Cat& operator=(const Cat& other);
+  WrongCat();
+  ~WrongCat();
+  WrongCat(const WrongCat& other);
+  WrongCat& operator=(const WrongCat& other);
   void makeSound() const;
+  std::string getType() const;
 };
-
-#endif  // CAT_HPP_
+#endif  // WRONG_CAT_HPP_

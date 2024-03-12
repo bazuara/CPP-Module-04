@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 17:09:38 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/22 19:12:14 by bazuara          ###   ########.fr       */
+/*   Created: 2024/02/14 17:02:57 by bazuara           #+#    #+#             */
+/*   Updated: 2024/02/15 17:44:08 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Animal.hpp>
+#include <WrongAnimal.hpp>
 
-Animal::Animal() {
-  type = "Animal";
-  std::cout << "Animal constructor called" << std::endl;
+WrongAnimal::WrongAnimal() {
+  type = "WrongAnimal";
+  std::cout << "WrongAnimal constructor called" << std::endl;
 }  // Default constructor
 
-Animal::~Animal() {
-  std::cout << "Animal destructor called" << std::endl;
+WrongAnimal::~WrongAnimal() {
+  std::cout << "WrongAnimal destructor called" << std::endl;
 }  // Destructor
 
-Animal::Animal(const Animal& other) {
+WrongAnimal::WrongAnimal(const WrongAnimal& other) {
   *this = other;
 }  // Copy constructor
 
-Animal& Animal::operator=(const Animal& other) {
-  type = other.getType();
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
+  type = other.type;
   return *this;
 }  // Assignment operator
 
-void Animal::makeSound() const {
-  std::cout << "Animal sound" << std::endl;
+void WrongAnimal::makeSound() const {
+  std::cout << "WrongAnimal sound" << std::endl;
 }  // Make sound
 
-std::string Animal::getType() const {
+std::string WrongAnimal::getType() const {
   return this->type;
 }  // Get type
-
-void Animal::setType(std::string type) {
-  this->type = type;
-}  // Set type

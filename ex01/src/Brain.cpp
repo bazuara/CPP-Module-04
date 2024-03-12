@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 16:58:31 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/22 19:09:29 by bazuara          ###   ########.fr       */
+/*   Created: 2024/02/15 18:56:20 by bazuara           #+#    #+#             */
+/*   Updated: 2024/02/15 18:57:45 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-#define CAT_HPP_
+#include <Brain.hpp>
 
-#include <Animal.hpp>
+Brain::Brain() {
+  std::cout << "Brain constructor called" << std::endl;
+}
 
-class Cat : public Animal {
- public:
-  Cat();
-  ~Cat();
-  Cat(const Cat& other);
-  Cat& operator=(const Cat& other);
-  void makeSound() const;
-};
+Brain::~Brain() {
+  std::cout << "Brain destructor called" << std::endl;
+}
 
-#endif  // CAT_HPP_
+std::string Brain::getIdea(int index) {
+  return ideas[index];
+}
+
+void Brain::setIdea(int index, std::string idea) {
+  ideas[index] = idea;
+}

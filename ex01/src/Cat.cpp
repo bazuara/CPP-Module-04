@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 17:06:56 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/22 19:01:32 by bazuara          ###   ########.fr       */
+/*   Created: 2024/02/02 17:09:07 by bazura            #+#    #+#             */
+/*   Updated: 2024/02/22 18:53:26 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Dog.hpp>
+#include <Cat.hpp>
 
-Dog::Dog() : Animal() {
-  this->setType("Dog");
-  std::cout << "Dog constructor called" << std::endl;
-}  // Default constructor
+Cat::Cat() : Animal() {
+  this->setType("Cat");
+  std::cout << "Cat constructor called" << std::endl;
+}  // Constructor
 
-Dog::~Dog() {
-  std::cout << "Dog destructor called" << std::endl;
+Cat::~Cat() {
+  std::cout << "Cat destructor called" << std::endl;
 }  // Destructor
 
-Dog::Dog(const Dog& other) {
+Cat::Cat(const Cat& other) {
   *this = other;
 }  // Copy constructor
 
-Dog& Dog::operator=(const Dog& other) {
+Cat& Cat::operator=(const Cat& other) {
   this->setType(other.getType());
   return *this;
 }  // Assignment operator
 
-void Dog::makeSound() const {
-  std::cout << "Guau Guau" << std::endl;
+void Cat::makeSound() const {
+  std::cout << "Miau Miau" << std::endl;
 }  // Member function

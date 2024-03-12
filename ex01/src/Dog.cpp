@@ -6,10 +6,11 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:06:56 by bazura            #+#    #+#             */
-/*   Updated: 2024/02/22 19:01:32 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/22 18:49:22 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <Brain.hpp>
 #include <Dog.hpp>
 
 Dog::Dog() : Animal() {

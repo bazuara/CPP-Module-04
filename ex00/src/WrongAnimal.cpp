@@ -6,7 +6,7 @@
 /*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:02:57 by bazuara           #+#    #+#             */
-/*   Updated: 2024/02/15 17:44:08 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/02/22 19:21:52 by bazuara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,7 @@ void WrongAnimal::makeSound() const {
 std::string WrongAnimal::getType() const {
   return this->type;
 }  // Get type
+
+void WrongAnimal::setType(std::string type) {
+  this->type = type;
+}  // Set type
