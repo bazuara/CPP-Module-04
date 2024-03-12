@@ -2,6 +2,7 @@
 *.o
 .cache
 *.pdf
+ex0*/.devcontainer
 #leaks reports
 leaks.*.txt
 #ex00
