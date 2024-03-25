@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:38 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/25 10:47:12 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 11:25:10 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ Animal::Animal(const Animal& other) {
 }  // Copy constructor
 
 Animal& Animal::operator=(const Animal& other) {
-  type = other.getType();
+  std::cout << "Animal assignment operator called" << std::endl;
+  type = other.type;
+  *brain = *other.brain;
   return *this;
 }  // Assignment operator
 

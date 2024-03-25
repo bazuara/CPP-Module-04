@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:06:56 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/25 10:48:55 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 11:10:53 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Dog::Dog(const Dog& other)  : Animal(other) {
 
 Dog& Dog::operator=(const Dog& other) {
   this->setType(other.getType());
+  this->brain = other.brain;
   return *this;
 }  // Assignment operator
 

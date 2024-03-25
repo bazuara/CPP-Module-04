@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:07 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/25 10:59:27 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 11:18:55 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ Cat::Cat(const Cat& other) : Animal(other) {
 }  // Copy constructor
 
 Cat& Cat::operator=(const Cat& other) {
-  this->setType(other.getType());
+  std::cout << "Cat assignment operator called" << std::endl;
+  if (this == &other) return *this;
+  Animal::operator=(other);
   return *this;
 }  // Assignment operator
 
