@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:07 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/21 18:13:19 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 10:59:27 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ Cat::~Cat() {
   std::cout << "Cat destructor called" << std::endl;
 }  // Destructor
 
-Cat::Cat(const Cat& other) {
-  *this = other;
+Cat::Cat(const Cat& other) : Animal(other) {
+  std::cout << "Cat copy constructor called" << std::endl;
 }  // Copy constructor
 
 Cat& Cat::operator=(const Cat& other) {

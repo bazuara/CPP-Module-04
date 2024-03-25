@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:07:57 by bazuara           #+#    #+#             */
-/*   Updated: 2024/03/25 10:50:52 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 11:00:25 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int main() {
 
   // deep copy test
   std::cout << std::endl;
-  std::cout << "DEEP COPY:" << std::endl;
+  std::cout << "DEEP COPY DOG:" << std::endl;
   std::cout << std::endl;
   const Dog* ani = new Dog();
   std::cout << "Ani exists" << std::endl;
@@ -62,6 +62,21 @@ int main() {
   std::cout << "Bye bye ani" << std::endl;
   delete ani;
   delete mal;
+
+  std::cout << std::endl;
+  std::cout << "DEEP COPY CAT:" << std::endl;
+  std::cout << std::endl;
+  const Cat* anic = new Cat();
+  std::cout << "Anic exists" << std::endl;
+  anic->getBrain()->setIdea(0, "This is ani cat idea");
+  const Cat* malc = new Cat(*anic);
+    std::cout << "Mal exists" << std::endl;
+  malc->getBrain()->setIdea(0, "This is mal cat idea");
+  std::cout << anic->getBrain()->getIdea(0) << std::endl;
+  std::cout << malc->getBrain()->getIdea(0) << std::endl;
+  std::cout << "Bye bye ani" << std::endl;
+  delete anic;
+  delete malc;
 
   // free all animals from array
   std::cout << std::endl;
