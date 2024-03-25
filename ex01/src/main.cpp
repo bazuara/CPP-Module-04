@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:07:57 by bazuara           #+#    #+#             */
-/*   Updated: 2024/03/25 11:21:00 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 11:33:07 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,16 +84,29 @@ int main() {
   std::cout << "DEEP ASSIGNMENT CAT:" << std::endl;
   std::cout << std::endl;
   const Cat* origcat = new Cat();
-  origcat->getBrain()->setIdea(0, "this is a bad idea");
+  origcat->getBrain()->setIdea(0, "this is a cats bad idea");
   Cat* copycat = new Cat();
   *copycat = *origcat;
   std::cout << copycat->getBrain()->getIdea(0) << std::endl;
-  copycat->getBrain()->setIdea(0, "this is a good idea");
+  copycat->getBrain()->setIdea(0, "this is a cats good idea");
   std::cout << copycat->getBrain()->getIdea(0) << std::endl;
-  
 
   delete origcat;
   delete copycat;
+
+  std::cout << std::endl;
+  std::cout << "DEEP ASSIGNMENT DOG:" << std::endl;
+  std::cout << std::endl;
+  const Dog* origdog = new Dog();
+  origdog->getBrain()->setIdea(0, "this is a dogs bad idea");
+  Dog* copydog = new Dog();
+  *copydog = *origdog;
+  std::cout << copydog->getBrain()->getIdea(0) << std::endl;
+  copydog->getBrain()->setIdea(0, "this is a dogs good idea");
+  std::cout << copydog->getBrain()->getIdea(0) << std::endl;
+
+  delete origdog;
+  delete copydog;
 
   // // free all animals from array
   // std::cout << std::endl;
