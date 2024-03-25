@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:07:57 by bazuara           #+#    #+#             */
-/*   Updated: 2024/03/12 10:18:04 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/21 18:23:08 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,47 @@ int main() {
   // std::cout << i->getBrain()->getIdea(2) << std::endl;
   // delete i;
 
-  // create an array of Animals, half Cat, half Dog
-  const int n = 4;
-  const Animal* animals[n];
-  for (int i = 0; i < n / 2; i++) {
-    animals[i] = new Cat();
-    std::cout << "Animal type on " << i << " is a Cat" << std::endl;
-  }
-  for (int i = n / 2; i < n; i++) {
-    animals[i] = new Dog();
-    std::cout << "Animal type on " << i << " is a Dog" << std::endl;
-  }
+  // // create an array of Animals, half Cat, half Dog
+  // const int n = 4;
+  // const Animal* animals[n];
+  // for (int i = 0; i < n / 2; i++) {
+  //   animals[i] = new Cat();
+  //   std::cout << "Animal type on " << i << " is a Cat" << std::endl;
+  // }
+  // for (int i = n / 2; i < n; i++) {
+  //   animals[i] = new Dog();
+  //   std::cout << "Animal type on " << i << " is a Dog" << std::endl;
+  // }
 
-  // make them speak
-  for (int i = 0; i < n; i++) {
-    animals[i]->makeSound();
-    animals[i]->getBrain()->setIdea(0, "hola");
-    std::cout << animals[i]->getBrain()->getIdea(0) << std::endl;
-  }
+  // // make them speak
+  // for (int i = 0; i < n; i++) {
+  //   animals[i]->makeSound();
+  //   animals[i]->getBrain()->setIdea(0, "Idea");
+  //   std::cout << animals[i]->getBrain()->getIdea(0) << std::endl;
+  // }
 
-  // deep copy the first animal to a new one
-  // const Cat* cat = animals[0];
+  // deep copy
+  std::cout << std::endl;
+  std::cout << "DEEP COPY:" << std::endl;
+  std::cout << std::endl;
+  const Dog* ani = new Dog();
+  std::cout << "Ani exists" << std::endl;
+  ani->getBrain()->setIdea(0, "This is ani dog idea");
+  const Dog* mal = new Dog(*ani);
+    std::cout << "Mal exists" << std::endl;
+  // mal = ani;
+  mal->getBrain()->setIdea(0, "This is mal dog idea");
+  std::cout << ani->getBrain()->getIdea(0) << std::endl;
+  std::cout << mal->getBrain()->getIdea(0) << std::endl;
+  std::cout << "Bye bye ani" << std::endl;
 
-    // free all animals from array
-  for (int i = 0; i < n; i++) {
-    delete animals[i];
-  }
+  // free all animals from array
+  // std::cout << std::endl;
+  // std::cout << "FREEEEEEE:" << std::endl;
+  // std::cout << std::endl;
+  // for (int i = 0; i < n; i++) {
+  //   delete animals[i];
+  // }
+
   return 0;
 }
