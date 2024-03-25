@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:38 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/21 18:39:13 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 10:47:12 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,10 @@ Animal::~Animal() {
 }  // Destructor
 
 Animal::Animal(const Animal& other) {
-  this->setType(other.getType());
+  // this->setType(other.getType());
+  type = other.type;
   std::cout << "Animal copy constructor called" << std::endl;
-  for (int i = 0; i < 100; i++) {
-    this->brain->setIdea(i, other.brain->getIdea(i));
-  }
-  *this = other;
+  brain = new Brain(*other.brain);
 }  // Copy constructor
 
 Animal& Animal::operator=(const Animal& other) {

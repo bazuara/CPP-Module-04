@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bazuara <bazuara@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:53:19 by bazuara           #+#    #+#             */
-/*   Updated: 2024/02/15 19:35:56 by bazuara          ###   ########.fr       */
+/*   Updated: 2024/03/25 10:48:47 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Brain {
  public:
   Brain();
   ~Brain();
+  Brain(const Brain& other);
   std::string getIdea(int index);
   void setIdea(int index, std::string idea);
 };
