@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:49:47 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/21 18:21:41 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 12:24:23 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,9 @@ class Animal {
   virtual void makeSound() const;
   std::string getType() const;
   void setType(std::string type);
-  Brain* getBrain() const;
-  void setBrain(Brain* brain);
 
  private:
   std::string type;
-  Brain* brain;
 };
 
 #endif  // ANIMAL_HPP_

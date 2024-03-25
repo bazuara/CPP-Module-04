@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:56:38 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/21 18:21:58 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 12:36:11 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Dog : public Animal {
   Dog(const Dog& other);
   Dog& operator=(const Dog& other);
   void makeSound() const;
+  Brain* getBrain() const;
 
  private:
   Brain* brain;
