@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:58:31 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/25 12:36:00 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 12:58:50 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ class Cat : public Animal {
  public:
   Cat();
   ~Cat();
+
   Cat(const Cat& other);
   Cat& operator=(const Cat& other);
+
   void makeSound() const;
   Brain* getBrain() const;
 

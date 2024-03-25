@@ -6,16 +6,16 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:09:07 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/25 12:43:39 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 13:00:23 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Cat.hpp>
 
 Cat::Cat() : Animal() {
+  std::cout << "Cat constructor called" << std::endl;
   this->setType("Cat");
   brain = new Brain();
-  std::cout << "Cat constructor called" << std::endl;
 }  // Constructor
 
 Cat::~Cat() {

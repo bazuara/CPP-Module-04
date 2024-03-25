@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:06:56 by bazura            #+#    #+#             */
-/*   Updated: 2024/03/25 12:42:39 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 13:00:46 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <Dog.hpp>
 
 Dog::Dog() : Animal() {
+  std::cout << "Dog constructor called" << std::endl;
   this->setType("Dog");
   brain = new Brain();
-  std::cout << "Dog constructor called" << std::endl;
 }  // Default constructor
 
 Dog::~Dog() {
