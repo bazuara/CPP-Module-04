@@ -6,9 +6,7 @@ SOURCE_FILES = main.cpp \
 				Animal.cpp \
 				Brain.cpp \
 				Cat.cpp \
-				Dog.cpp \
-				WrongAnimal.cpp \
-				WrongCat.cpp
+				Dog.cpp
 
 SOURCES = $(addprefix $(SOURCE_FOLDER), $(SOURCE_FILES))
 
