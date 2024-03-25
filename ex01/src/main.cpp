@@ -6,7 +6,7 @@
 /*   By: bazura <bazuara@student.42madrid.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:07:57 by bazuara           #+#    #+#             */
-/*   Updated: 2024/03/25 12:12:37 by bazura           ###   ########.fr       */
+/*   Updated: 2024/03/25 12:40:01 by bazura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 #include <WrongCat.hpp>
 
 int main() {
-  const Animal* i = new Cat();
+  const Cat* i = new Cat();
 
   i->makeSound();  // will output the cat sound!
+  i->getBrain()->setIdea(0, "I am a cat");
   i->getBrain()->setIdea(0, "I am a cat");
   std::cout << i->getBrain()->getIdea(0) << std::endl;
   i->getBrain()->setIdea(1, "I am a cat again on 1");
@@ -42,9 +43,13 @@ int main() {
 
   // make them speak
   for (int i = 0; i < n; i++) {
-    animals[i]->makeSound();
-    animals[i]->getBrain()->setIdea(0, "Idea");
-    std::cout << animals[i]->getBrain()->getIdea(0) << std::endl;
+    if (dynamic_cast<const Dog*>(animals[i])) {
+      std::cout << "Animal " << i << " is a Dog" << std::endl;
+      dynamic_cast<const Dog*>(animals[i])->makeSound();
+    } else if (dynamic_cast<const Cat*>(animals[i])) {
+      std::cout << "Animal " << i << " is a Cat" << std::endl;
+      dynamic_cast<const Cat*>(animals[i])->makeSound();
+    }
   }
 
   // test animal class is abstract
@@ -59,9 +64,9 @@ int main() {
   anid->getBrain()->setIdea(0, "This is ani dog idea");
   const Dog* mald = new Dog(*anid);
     std::cout << "Mald exists" << std::endl;
-  mald->getBrain()->setIdea(0, "This is mal dog idea");
-  std::cout << anid->getBrain()->getIdea(0) << std::endl;
-  std::cout << mald->getBrain()->getIdea(0) << std::endl;
+  // mald->getBrain()->setIdea(0, "This is mal dog idea");
+  // std::cout << anid->getBrain()->getIdea(0) << std::endl;
+  // std::cout << mald->getBrain()->getIdea(0) << std::endl;
   std::cout << "Bye bye ani" << std::endl;
   delete anid;
   delete mald;
